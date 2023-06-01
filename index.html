@@ -20,9 +20,13 @@
 <body>
     <div id="kartcontainer"></div>
     <script>
-        var kommunekart = new Kommunekart.Map({
-            container: 'kartcontainer'
-        });
+        new Kommunekart.Map({container: 'kartcontainer'});
+
+        // if queryparameter includes "silent" then create a noop function to override the default console.log
+        // this is to prevent the iframe from logging to the console of the parent page as Norkart is quite chatty 📣🗯😒
+        if (window.location.search.includes('silent')) {
+            console.log = function() {};
+        }
     </script>
 </body>
 </html>
