@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norkart-embed</title>
+    <script src="http://kommunekart.com/Scripts/kommunekart.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #kartcontainer {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="kartcontainer"></div>
+    <script>
+        var kommunekart = new Kommunekart.Map({
+            container: 'kartcontainer'
+        });
+    </script>
+</body>
+</html>
